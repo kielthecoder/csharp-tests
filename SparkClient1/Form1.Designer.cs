@@ -33,6 +33,8 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.lstRooms = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblMessages = new System.Windows.Forms.Label();
+            this.lstMessages = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblAuth
@@ -66,8 +68,9 @@
             this.lstRooms.FormattingEnabled = true;
             this.lstRooms.Location = new System.Drawing.Point(15, 68);
             this.lstRooms.Name = "lstRooms";
-            this.lstRooms.Size = new System.Drawing.Size(113, 186);
+            this.lstRooms.Size = new System.Drawing.Size(156, 186);
             this.lstRooms.TabIndex = 3;
+            this.lstRooms.SelectedIndexChanged += new System.EventHandler(this.lstRooms_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -78,11 +81,33 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Rooms:";
             // 
+            // lblMessages
+            // 
+            this.lblMessages.AutoSize = true;
+            this.lblMessages.Location = new System.Drawing.Point(179, 52);
+            this.lblMessages.Name = "lblMessages";
+            this.lblMessages.Size = new System.Drawing.Size(58, 13);
+            this.lblMessages.TabIndex = 5;
+            this.lblMessages.Text = "Messages:";
+            this.lblMessages.Visible = false;
+            // 
+            // lstMessages
+            // 
+            this.lstMessages.FormattingEnabled = true;
+            this.lstMessages.Location = new System.Drawing.Point(182, 68);
+            this.lstMessages.Name = "lstMessages";
+            this.lstMessages.Size = new System.Drawing.Size(378, 186);
+            this.lstMessages.TabIndex = 6;
+            this.lstMessages.Visible = false;
+            this.lstMessages.DoubleClick += new System.EventHandler(this.lstMessages_DoubleClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 276);
+            this.Controls.Add(this.lstMessages);
+            this.Controls.Add(this.lblMessages);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstRooms);
             this.Controls.Add(this.btnConnect);
@@ -102,6 +127,8 @@
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.ListBox lstRooms;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMessages;
+        private System.Windows.Forms.ListBox lstMessages;
     }
 }
 
