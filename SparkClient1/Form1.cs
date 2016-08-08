@@ -120,7 +120,9 @@ namespace SparkClient1
 
         private void lstMessages_DoubleClick(object sender, EventArgs e)
         {
-            Console.WriteLine(lstMessages.SelectedIndex);
+            frmInfo f = new frmInfo();
+            f.Msg = messages.items[lstMessages.SelectedIndex];
+            f.Show();
         }
     }
 
